@@ -42,11 +42,11 @@ public class PhotoBrowserActivity extends MvpActivity<PhotoBrowserPresenter>
     private void setupSwipeView() {
         swipeView.getBuilder().setDisplayViewCount(3)
                 .setSwipeDecor(new SwipeDecor()
-                        .setPaddingTop(12)
-                        .setRelativeScale(0.01f))
+                        .setPaddingTop(24)
+                        .setRelativeScale(0.02f))
                 .setSwipeType(SwipePlaceHolderView.SWIPE_TYPE_HORIZONTAL);
         swipeView.addItemRemoveListener(count -> {
-            if (count % PhotoBrowserPresenter.DEFAULT_PAGE_SIZE < 3) {
+            if (count == 7) {
                 presenter.needMorePhotos();
             }
         });

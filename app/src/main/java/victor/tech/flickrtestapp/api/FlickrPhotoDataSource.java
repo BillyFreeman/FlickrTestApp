@@ -1,6 +1,8 @@
 package victor.tech.flickrtestapp.api;
 
 
+import android.util.Log;
+
 import java.util.List;
 
 import io.reactivex.Observable;

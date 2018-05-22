@@ -27,7 +27,7 @@ public class PhotoBrowserPresenterImp implements PhotoBrowserPresenter {
             }
         }, error -> {
             if (this.view != null) {
-                throw new Exception(error);
+                this.view.showMessage(error.getMessage());
             }
         });
     }
